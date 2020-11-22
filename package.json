@@ -1,0 +1,28 @@
+{
+  "name": "remember-tylie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaun2D2/remember-tylie.git"
+  },
+  "author": "Shaun Lobsinger",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Shaun2D2/remember-tylie/issues"
+  },
+  "homepage": "https://github.com/Shaun2D2/remember-tylie#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "css-loader": "^5.0.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
