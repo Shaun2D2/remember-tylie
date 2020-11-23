@@ -1,3 +1,1 @@
-const memories = [
-
-];
+const memories = [];
