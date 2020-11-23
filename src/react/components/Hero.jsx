@@ -2,8 +2,6 @@ import React from 'react';
 
 import './Hero.scss';
 
-// 
-
 const Hero = () => (
   <div className="hero-section">
     <div className="container hero-section__container">
