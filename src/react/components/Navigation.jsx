@@ -11,6 +11,7 @@ const Navigation = () => (
   <Toggle aria-controls="basic-navbar-nav" />
   <Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
+        <Link href="#link">Eulogy</Link>
       <Link href="#link">Photos</Link>
       <Link href="#link">Memories</Link>
     </Nav>
