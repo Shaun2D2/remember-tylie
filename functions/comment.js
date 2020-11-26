@@ -26,6 +26,7 @@ exports.handler = async () => {
       body: JSON.stringify({ code: 200, data: response }),
     };
   } catch (e) {
+    console.log(e);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'something went wrong!' }),
