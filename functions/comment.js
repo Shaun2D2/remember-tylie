@@ -21,12 +21,15 @@ exports.handler = async () => {
       });
     });
 
+    connection.end();
+
     return {
       statusCode: 200,
       body: JSON.stringify({ code: 200, data: response }),
     };
   } catch (e) {
-    console.log(e);
+    connection.end();
+
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'something went wrong!' }),

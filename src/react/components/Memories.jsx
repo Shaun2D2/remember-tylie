@@ -50,7 +50,7 @@ const Memories = () => {
   };
 
   return (
-    <Section title="Memories">
+    <Section title="Memories" id="memories">
       <button type="button" className="btn btn-primary" onClick={handleClick}>Add your memory</button>
       <hr />
       <div className="card-columns">

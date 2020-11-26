@@ -29,7 +29,7 @@ const photos = [
 ];
 
 const SiteGallery = () => (
-  <Section title="Photos">
+  <Section title="Photos" id="photos">
     <Gallery photos={photos} />
   </Section>
 );
