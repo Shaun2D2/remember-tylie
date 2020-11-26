@@ -8,7 +8,6 @@ const Section = ({ title, children }) => (
       {title && (
         <div className="section__title">
           <h1>{title}</h1>
-          -
         </div>
       )}
       {children}

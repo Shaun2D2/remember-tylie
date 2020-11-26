@@ -7,6 +7,7 @@
     "local": "npx webpack-dev-server",
     "lint": "npx eslint . --fix",
     "build": "npx webpack",
+    "build:watch": "npx webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,9 +45,12 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "bootswatch": "^4.5.3",
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
+    "mysql": "^2.18.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",

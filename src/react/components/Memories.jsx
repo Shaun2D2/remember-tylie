@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Form, Button, Modal } from 'react-bootstrap';
 
 import Section from './Section';
@@ -13,13 +14,13 @@ const MemoryFormModal = ({ show, onDismiss }) => (
     </Header>
     <Body>
       <Form>
-        <Group controlId="formBasicEmail">
+        <Group>
           <Label>Your First Name</Label>
           <Control type="text" placeholder="James" />
         </Group>
-        <Group controlId="formBasicEmail">
+        <Group>
           <Label>Your Memory</Label>
-          <Control as="textarea" rows={3} />
+          <Control as="textarea" maxLength={500} rows={3} />
         </Group>
         <Button variant="primary" type="submit">
           Submit
@@ -32,6 +33,11 @@ const MemoryFormModal = ({ show, onDismiss }) => (
 
 const Memories = () => {
   const [showForm, setShowForm] = useState(false);
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    axios.get('/.netlify/functions/comment').then((res) => setComments(res.data.data));
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -45,7 +51,24 @@ const Memories = () => {
 
   return (
     <Section title="Memories">
-      <a href="#" onClick={handleClick}>Add a memory</a>
+      <button type="button" className="btn btn-primary" onClick={handleClick}>Add your memory</button>
+      <hr />
+      <div className="card-columns">
+        {comments.map((comment) => (
+          <div className="card">
+            <div className="card-body">
+              <div className="card-text">{comment.comment}</div>
+              <div className="card-title">
+                {' '}
+                -
+                {comment.name}
+              </div>
+            </div>
+          </div>
+        ))}
+
+      </div>
+
       <MemoryFormModal onDismiss={handleDismiss} show={showForm} />
     </Section>
   );
