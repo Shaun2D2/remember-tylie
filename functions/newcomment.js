@@ -29,15 +29,15 @@ exports.handler = async (event, context) => {
       });
     });
 
-    connection.end();
+    connection.destroy();
 
     return {
       statusCode: 200,
       body: JSON.stringify({ code: 200 }),
     };
   } catch (e) {
-      console.log(e);
-    connection.end();
+    console.log(e);
+    connection.destroy();
 
     return {
       statusCode: 500,

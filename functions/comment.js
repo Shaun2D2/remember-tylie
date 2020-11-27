@@ -21,14 +21,14 @@ exports.handler = async () => {
       });
     });
 
-    connection.end();
+    connection.destroy();
 
     return {
       statusCode: 200,
       body: JSON.stringify({ code: 200, data: response }),
     };
   } catch (e) {
-    connection.end();
+    connection.destroy();
 
     return {
       statusCode: 500,
