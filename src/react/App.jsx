@@ -15,7 +15,7 @@ const App = () => (
     <Navigation />
     <Hero />
     <Eulogy />
-    <DividerSection quote="Your life was a blessing, your memory a treasture, you are loved beyond words and missed beyond measure." />
+    <DividerSection quote="Your life was a blessing, your memory a treasure, you are loved beyond words and missed beyond measure." />
     <Gallery />
     <DividerSection quote="Those we love don't go away, they walk beside us everyday." className="divider-section--blossom-2" />
     <Memories />
