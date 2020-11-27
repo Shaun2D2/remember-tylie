@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Form, Button, Modal } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import Section from './Section';
 
@@ -30,6 +31,11 @@ const MemoryFormModal = ({ show, onDismiss }) => (
 
   </Modal>
 );
+
+MemoryFormModal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+};
 
 const Memories = () => {
   const [showForm, setShowForm] = useState(false);

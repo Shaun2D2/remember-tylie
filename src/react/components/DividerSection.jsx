@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import './DividerSection.scss';
 
@@ -13,6 +14,12 @@ const DividerSection = ({ className, quote }) => (
 
 DividerSection.defaultProps = {
   className: 'divider-section--blossom-1',
+  quote: null,
+};
+
+DividerSection.propTypes = {
+  className: PropTypes.string,
+  quote: PropTypes.string,
 };
 
 export default DividerSection;
