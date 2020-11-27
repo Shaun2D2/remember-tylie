@@ -6,31 +6,31 @@ import Section from './Section';
 
 const photos = [
   {
-    src: 'http://lorempixel.com/400/200/nature/',
-    width: 4,
-    height: 3,
-  },
-  {
-    src: 'http://lorempixel.com/700/700/nature/',
+    src: '/tylie-1.jpg',
     width: 1,
     height: 1,
   },
   {
-    src: 'http://lorempixel.com/400/200/nature/',
+    src: '/tylie-2.jpg',
     width: 1,
     height: 1,
   },
   {
-    src: 'http://lorempixel.com/500/500/nature/',
-    width: 4,
-    height: 3,
+    src: '/tylie-4.jpg',
+    width: 1,
+    height: 1,
+  },
+  {
+    src: '/tylie-3.jpg',
+    width: 5,
+    height: 4,
   },
 
 ];
 
 const SiteGallery = () => (
   <Section title="Photos" id="photos">
-    <Gallery photos={photos} />
+    <Gallery photos={photos} direction="column" />
   </Section>
 );
 
