@@ -98,7 +98,7 @@ const Memories = () => {
 
   useEffect(() => {
     fetchComments();
-  }, [fetchComments]);
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
