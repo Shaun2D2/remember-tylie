@@ -8,6 +8,7 @@ exports.handler = async () => {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: 'REMEMBER',
+    charset: 'utf8mb4',
   });
 
   connection.connect();
